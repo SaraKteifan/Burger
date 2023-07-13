@@ -1,0 +1,81 @@
+body{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-areas: 'auto auto auto'
+                         'auto auto auto'
+                         'auto auto auto'
+                         'auto auto auto';
+    height: 100vh;
+}
+
+.container{
+    grid-area: 2 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1%;
+}
+
+.top-bun{
+    background-image: linear-gradient(rgb(201, 139, 17), rgb(244, 174, 33));
+    height: 30%;
+    border-radius: 50% 50% 0 0;
+}
+
+.tomato{
+    background-color: red;
+    height: 5%;
+    margin: 0 2%;
+}
+
+.lettuce{
+    background-color: rgb(37, 170, 37);
+    height: 10%;
+    border-radius: 20px;
+}
+
+.cheese{
+    background-color: rgb(255, 234, 0);
+    height: 5%;
+    border-radius: 20px;
+}
+
+.patty{
+    background-color: brown;
+    height: 15%;
+    border-radius: 30px;
+}
+
+.bottom-bun{
+    background-image: linear-gradient(rgb(244, 174, 33), rgb(201, 139, 17));
+    height: 20%;
+    border-radius: 0 0 30px 30px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    body {
+        grid-template-areas: 'auto auto auto auto'
+                             'auto auto auto auto'
+                             'auto auto auto auto'
+                             'auto auto auto auto';
+    }
+    .container{
+        grid-area: 2 / 2 / 4 / 4;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        grid-area: 2 / 1 / 4 / 5;
+        margin: 0 10%;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .container{
+        grid-area: 1 / 1 / 5 / 5;
+        margin: 10% 10%;
+    }
+}
